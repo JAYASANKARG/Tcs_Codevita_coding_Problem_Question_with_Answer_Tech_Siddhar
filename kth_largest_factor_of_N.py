@@ -36,3 +36,31 @@ Output: 1
 
 Explanation: N is 30, k is 9. The factors of 30 are (1,2,3,5,6,10,15,30). There are only 8 factors. As k is more than the number of factors, the output is 1.
 """
+
+"""n,k=map(int,input("Enter the n and k  value : ").split(" "))
+
+l=[]
+
+for i in range(1,n+1):
+    if(n%i==0):
+        l.append(i)
+l=l[::-1]
+print(l)
+if(len(l)>=k):
+    print(l[k-1])
+
+else:
+    print("1")"""
+
+n,k=map(int,input("Enter the n and k  value : ").split(" "))
+count=0
+for i in range(n,0,-1):
+    if(n%i==0):
+        count+=1
+
+        if(count==k):
+            print(i)
+            break
+
+if(count!=k):
+    print("1")
